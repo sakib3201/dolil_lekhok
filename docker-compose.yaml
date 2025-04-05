@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  database:
+    image: postgres:17.4
+    environment:
+      - POSTGRES_PASSWORD=rahat
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=resources
+    ports:
+      - 5433:5432
