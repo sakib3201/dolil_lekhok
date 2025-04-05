@@ -1,5 +1,5 @@
-<script>
-	let files = [];
+<script lang="ts">
+	let files: File[] = [];
 	
 	async function handleUpload() {
 		if (files.length === 0) {
@@ -16,7 +16,7 @@
 	<h1 class="text-4xl font-bold text-center mb-8">Welcome to Dolil Lekhok</h1>
 	
 	<div class="max-w-2xl mx-auto">
-		<form on:submit|preventDefault={handleUpload} class="space-y-6">
+		<form onsubmit={handleUpload} class="space-y-6">
 			<div class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
 				<label for="images" class="block text-gray-600">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -30,13 +30,13 @@
 						accept="image/*"
 						class="hidden"
 						bind:files
-						on:change={() => {
+						onchange={() => {
 							if (files.length > 0) {
 								alert(`Selected ${files.length} images`);
 							}
 						}}
 					/>
-					<button type="button" class="mt-2 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+					<button type="button" class="cursor-pointer mt-2 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
 						Browse Files
 					</button>
 				</label>
@@ -44,7 +44,7 @@
 			
 			<button
 				type="submit"
-				class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+				class="w-full cursor-pointer flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 			>
 				Upload Images
 			</button>

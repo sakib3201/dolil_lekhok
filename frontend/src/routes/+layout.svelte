@@ -13,11 +13,11 @@
 	<div class="max-w-7xl mx-auto px-4">
 		<div class="flex justify-between h-16">
 			<div class="flex items-center">
-				<a href="/" class="text-xl font-bold text-indigo-600">
+				<a href="/" target="_self" class="text-xl font-bold text-indigo-600">
 					Dolil Lekhok
 				</a>
 			</div>
-			
+
 			<div class="md:hidden">
 				<button 
 					type="button"
