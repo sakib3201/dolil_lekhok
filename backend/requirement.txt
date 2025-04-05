@@ -1,4 +1,8 @@
 sqlalchemy
 pydantic
-fastapi
 uvicorn
+fastapi[all] 
+psycopg2-binary 
+python-jose 
+passlib[bcrypt] 
+python-dotenv
