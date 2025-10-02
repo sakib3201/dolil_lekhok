@@ -1,4 +1,5 @@
 <script>
+    import logo from '../images/dolil_lekhok_logo.webp';
 </script>
   
 <div class="flex flex-col min-h-screen">
@@ -33,12 +34,12 @@
   
         <!-- Hero Illustration -->
         <div class="relative">
-          <div
-            class="bg-gray-800 w-full h-80 lg:h-[500px] rounded-2xl shadow-inner flex items-center justify-center border border-gray-700"
-          >
-            <span class="text-gray-400 text-xl">
-              <span class="text-gray-500">[ Hero Illustration / Screenshot Placeholder ]</span>
-            </span>
+          <div class="w-full h-80 lg:h-[500px] flex items-center justify-center">
+            <img
+              src={logo}
+              alt="Dolil Lekhok Logo"
+              class="max-h-full max-w-full object-contain"
+            />
           </div>
         </div>
       </div>

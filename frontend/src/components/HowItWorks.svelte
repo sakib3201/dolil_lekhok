@@ -2,7 +2,7 @@
     import { fade } from 'svelte/transition';
 </script>
 
-<section class="how-it-works-section" in:fade>
+<section id="how" class="how-it-works-section" in:fade>
     <h2 class="section-title">কীভাবে কাজ করে</h2>
     <p class="section-subtitle">আপনার দলিলগুলো ডিজিটাল করার জন্য সহজ ৩ ধাপ প্রক্রিয়া</p>
     <div class="steps-grid">

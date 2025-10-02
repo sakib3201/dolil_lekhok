@@ -2,7 +2,7 @@
     import { fade } from 'svelte/transition';
 </script>
 
-<section class="features-section" in:fade>
+<section id="features" class="features-section" in:fade>
     <h2 class="section-title">শক্তিশালী বৈশিষ্ট্য বাংলাদেশী আইনজীবীদের জন্য</h2>
     <p class="section-subtitle">আপনার আইনি দলিলগুলো ডিজিটাল করতে যা কিছু প্রয়োজন, সবই এখানে</p>
     <div class="features-grid">

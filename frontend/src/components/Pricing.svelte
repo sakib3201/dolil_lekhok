@@ -2,7 +2,7 @@
     import { fade } from 'svelte/transition';
 </script>
 
-<section class="pricing-section" in:fade>
+<section id="pricing" class="pricing-section" in:fade>
     <h2 class="section-title">সহজ, স্বচ্ছ মূল্য নির্ধারণ</h2>
     <p class="section-subtitle">আপনার প্রয়োজনের জন্য উপযুক্ত পরিকল্পনা চয়ন করুন</p>
     <div class="pricing-grid">
@@ -17,7 +17,8 @@
             <button class="get-started">শুরু করুন</button>
         </div>
         <div class="pricing-card popular">
-            <h3>প্রফেশনাল <span>সবচেয়ে জনপ্রিয়</span></h3>
+            <span class="popular-badge">সবচেয়ে জনপ্রিয়</span>
+            <h3>প্রফেশনাল</h3>
             <p class="price">৳1500/মাস</p>
             <ul>
                 <li>200 ডকুমেন্ট/মাস</li>
@@ -200,20 +201,28 @@
         height: 4px;
         background: linear-gradient(90deg, #6366F1, #8B5CF6);
     }
-    .pricing-card.popular span {
-        background: linear-gradient(90deg, #6366F1, #8B5CF6);
+    .popular-badge {
+        background: linear-gradient(135deg, #6366F1, #8B5CF6);
         color: #FFFFFF;
-        padding: 0.25rem 1rem;
-        font-size: 0.75rem;
+        padding: 0.5rem 2rem;
+        font-size: 0.7rem;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 1px;
         position: absolute;
-        top: -12px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 20px;
-        box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.2);
+        top: 35px;
+        left: -35px;
+        transform: rotate(-45deg);
+        box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 10;
+        white-space: nowrap;
+    }
+    
+    .pricing-card.popular:hover .popular-badge {
+        opacity: 1;
+        transform: rotate(-45deg) translateY(0);
     }
     .get-started {
         background: linear-gradient(135deg, #6366F1, #8B5CF6);

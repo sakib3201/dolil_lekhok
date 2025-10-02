@@ -1,10 +1,28 @@
+<script>
+    /**
+     * @param {MouseEvent} event
+     * @param {string} targetId
+     */
+    function smoothScroll(event, targetId) {
+        event.preventDefault();
+        const element = document.getElementById(targetId);
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }
+</script>
+
 <nav class="navbar">
-    <div class="logo">Dolil Lekhok</div>
+    <div class="logo">
+        <span class="logo-text">Dolil Lekhok</span>
+    </div>
     <ul class="nav-links">
-        <li><a href="#features">Features</a></li>
-        <li><a href="#how">How It Works</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#features" on:click={(e) => smoothScroll(e, 'features')}>Features</a></li>
+        <li><a href="#how" on:click={(e) => smoothScroll(e, 'how')}>How It Works</a></li>
+        <li><a href="#pricing" on:click={(e) => smoothScroll(e, 'pricing')}>Pricing</a></li>
     </ul>
     <div class="actions">
         <a href="/login" class="btn-secondary">Login</a>
@@ -13,6 +31,45 @@
 </nav>
 
 <style>
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.logo-text {
+    background: linear-gradient(90deg, #8B5CF6 0%, #6366F1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.logo-text::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: linear-gradient(90deg, #8B5CF6 0%, #6366F1 100%);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-text::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.logo:hover .logo-text {
+    text-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;

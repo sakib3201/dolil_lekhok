@@ -1,26 +1,29 @@
 <script>
     import { fade } from 'svelte/transition';
+    import demo_profile_1 from '../images/demo_profile_1.webp';
+    import demo_profile_2 from '../images/demo_profile_2.webp';
+    import demo_profile_3 from '../images/demo_profile_3.webp';
 </script>
 
 <section class="testimonials-section" in:fade>
     <h2 class="section-title">বাংলাদেশী আইনজীবীদের নিকট বিশ্বাসযোগ্য</h2>
-    <p class="section-subtitle">ডলি লেখক সম্পর্কে আইনজীবী এবং আইন শিক্ষকদের মতামত দেখুন</p>
+    <p class="section-subtitle">Dolil Lekhok সম্পর্কে আইনজীবীদের মতামত দেখুন</p>
     <div class="testimonials-grid">
         <div class="testimonial-card">
-            <img src="https://via.placeholder.com/50" alt="Advocate Rahman" class="testimonial-image">
-            <h3>অ্যাডভোকেট রহমান</h3>
+            <img src={demo_profile_1} alt="Advocate Rahman" class="testimonial-image">
+            <h3>অ্যাডভোকেট মানিলা</h3>
             <p class="testimonial-text">"এই সফটওয়্যারটি আমাদের আইনি কাজে বিপ্লব ঘটিয়েছে। নির্ভুলতা অসাধারণ!"</p>
             <div class="rating">★★★★★</div>
         </div>
         <div class="testimonial-card">
-            <img src="https://via.placeholder.com/50" alt="Barrister Khan" class="testimonial-image">
+            <img src={demo_profile_2} alt="Barrister Khan" class="testimonial-image">
             <h3>ব্যারিস্টার খান</h3>
             <p class="testimonial-text">"আইনি দলিল ফরম্যাটিংয়ের জন্য এটি পারফেক্ট। আমি সুপারিশ করি।"</p>
             <div class="rating">★★★★☆</div>
         </div>
         <div class="testimonial-card">
-            <img src="https://via.placeholder.com/50" alt="Legal Clerk Ahmed" class="testimonial-image">
-            <h3>লিগাল ক্লার্ক আহমেদ</h3>
+            <img src={demo_profile_3} alt="Legal Clerk Ahmed" class="testimonial-image">
+            <h3>ব্যারিস্টার আহমেদ</h3>
             <p class="testimonial-text">"একটি সহজে ব্যবহারযোগ্য টুল যা আমার কাজে বিরাট সুবিধা দেয়।"</p>
             <div class="rating">★★★★★</div>
         </div>
