@@ -1,4 +1,51 @@
 {
-	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from bn!"
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "nav.home": "হোম",
+  "nav.features": "বৈশিষ্ট্য",
+  "nav.how_it_works": "কিভাবে কাজ করে",
+  "nav.testimonials": "পর্যালোচনা",
+  "nav.pricing": "মূল্য",
+  "nav.login": "লগইন",
+  "nav.signup": "নিবন্ধন",
+  "nav.language": "ভাষা",
+  
+  "hero.title": "পেশাসার আইনি নথি তৈরি করুন মিরিণের মধ্যে",
+  "hero.subtitle": "সহজেই আসালফ-প্রস্তুত আইনি নথি তৈরি করুন। কোন আইনি জ্ঞানের প্রয়োলন নেই।",
+  "hero.cta_primary": "লিরামূল্যে শুরু করুন",
+  "hero.cta_secondary": "আরও জানুন",
+  
+  "features.title": "কেন সলিল লেখক লেছে নিলেন",
+  "features.easy_to_use.title": "ল্যলারে সহজ",
+  "features.easy_to_use.description": "সহজ ইন্টারফেস যা আইনি নথি তৈরি করফে যে কেউ ল্যলার করফে পারে",
+  "features.court_approved.title": "আসালফ অনুমোসিফ",
+  "features.court_approved.description": "সমস্ত নথি আইনি লিশেষজ্ঞজ্যের জ্যারা যাচাইকৃত",
+  "features.save_time_money.title": "সময় দি অর্থ সাশ্রয় করুন",
+  "features.save_time_money.description": "ঘন্টার পরিলর্পে মিরিণে নথি তৈরি করুন",
+  
+  "how_it_works.title": "এটি কিভাবে কাজ করে",
+  "how_it_works.step1": "একটি নথির ধরন নির্বাচন করুন",
+  "how_it_works.step2": "সহজ প্রশ্নের উত্তর জিম",
+  "how_it_works.step3": "পর্যালোচনা করুন এলং সাউনলোস করুন",
+  
+  "testimonials.title": "আমারের ল্যলারকারীরা কি লছেন",
+  
+  "pricing.title": "সহজ, স্বচ্ছ মূল্য",
+  "pricing.free.name": "লিরামূল্যে",
+  "pricing.free.price": "৳০",
+  "pricing.free.feature1": "মৌলিক নথির টেমপ্লেণ",
+  "pricing.free.feature2": "ইমেইল সহায়তা",
+  "pricing.free.feature3": "সীমিফ সাউনলোস",
+  "pricing.free.cta": "শুরু করুন",
+  "pricing.pro.name": "প্রো",
+  "pricing.pro.price": "৳৯৯৯",
+  "pricing.pro.feature1": "সমস্ত নথির টেমপ্লেণ",
+  "pricing.pro.feature2": "অগ্রাধিকার সহায়তা",
+  "pricing.pro.feature3": "সীমাহীন সাউনলোস",
+  "pricing.pro.feature4": "নথি সংরক্ষণ",
+  "pricing.pro.cta": "প্রো হোন",
+  
+  "footer.copyright": "© ২০২৫ সলিল লেখক। সর্বস্বত্ব সংরক্ষিফ।",
+  "footer.privacy": "গোপনীয়তা নীফি",
+  "footer.terms": "সেলার শর্তাললী",
+  "footer.contact": "যোগাযোগ করুন"
 }

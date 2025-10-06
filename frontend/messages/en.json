@@ -1,4 +1,51 @@
 {
-	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from en!"
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "nav.home": "Home",
+  "nav.features": "Features",
+  "nav.how_it_works": "How It Works",
+  "nav.testimonials": "Testimonials",
+  "nav.pricing": "Pricing",
+  "nav.login": "Login",
+  "nav.signup": "Sign Up",
+  "nav.language": "Language",
+  
+  "hero.title": "Create Professional Legal Documents in Minutes",
+  "hero.subtitle": "Generate court-ready legal documents with ease. No legal expertise required.",
+  "hero.cta_primary": "Get Started for Free",
+  "hero.cta_secondary": "Learn More",
+  
+  "features.title": "Why Choose Dolil Lekhok",
+  "features.easy_to_use.title": "Easy to Use",
+  "features.easy_to_use.description": "Simple interface that anyone can use to create legal documents",
+  "features.court_approved.title": "Court-Approved",
+  "features.court_approved.description": "All documents are verified by legal experts",
+  "features.save_time_money.title": "Save Time & Money",
+  "features.save_time_money.description": "Create documents in minutes instead of hours",
+  
+  "how_it_works.title": "How It Works",
+  "how_it_works.step1": "Select a document type",
+  "how_it_works.step2": "Answer simple questions",
+  "how_it_works.step3": "Review and download",
+  
+  "testimonials.title": "What Our Users Say",
+  
+  "pricing.title": "Simple, Transparent Pricing",
+  "pricing.free.name": "Free",
+  "pricing.free.price": "$0",
+  "pricing.free.feature1": "Basic document templates",
+  "pricing.free.feature2": "Email support",
+  "pricing.free.feature3": "Limited downloads",
+  "pricing.free.cta": "Get Started",
+  "pricing.pro.name": "Pro",
+  "pricing.pro.price": "$9.99",
+  "pricing.pro.feature1": "All document templates",
+  "pricing.pro.feature2": "Priority support",
+  "pricing.pro.feature3": "Unlimited downloads",
+  "pricing.pro.feature4": "Document storage",
+  "pricing.pro.cta": "Go Pro",
+  
+  "footer.copyright": "© 2025 Dolil Lekhok. All rights reserved.",
+  "footer.privacy": "Privacy Policy",
+  "footer.terms": "Terms of Service",
+  "footer.contact": "Contact Us"
 }
