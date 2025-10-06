@@ -1,4 +1,15 @@
 <script>
+    import { languages, currentLanguage } from '$lib/stores/language';
+    import { onMount } from 'svelte';
+
+    let currentLang = 'en';
+    let isOpen = false;
+
+    // Subscribe to the language store
+    const unsubscribe = currentLanguage.subscribe(value => {
+        currentLang = value;
+    });
+
     /**
      * @param {MouseEvent} event
      * @param {string} targetId
@@ -13,6 +24,27 @@
             });
         }
     }
+
+    function toggleLanguage() {
+        currentLanguage.update(lang => lang === 'en' ? 'bn' : 'en');
+        isOpen = false;
+    }
+
+    // Close dropdown when clicking outside
+    function handleClickOutside(event) {
+        const target = event.target;
+        if (!target.closest('.language-switcher')) {
+            isOpen = false;
+        }
+    }
+
+    onMount(() => {
+        document.addEventListener('click', handleClickOutside);
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+            unsubscribe();
+        };
+    });
 </script>
 
 <nav class="navbar">
@@ -25,6 +57,33 @@
         <li><a href="#pricing" on:click={(e) => smoothScroll(e, 'pricing')}>Pricing</a></li>
     </ul>
     <div class="actions">
+        <div class="language-switcher">
+            <button 
+                class="btn-secondary language-toggle"
+                on:click|stopPropagation={() => isOpen = !isOpen}
+                aria-haspopup="true"
+                aria-expanded={isOpen}
+                aria-label="Select language"
+            >
+                {currentLang === 'en' ? 'EN' : 'বাং'}
+            </button>
+            {#if isOpen}
+                <div class="language-dropdown">
+                    <button 
+                        class="language-option {currentLang === 'en' ? 'active' : ''}"
+                        on:click|stopPropagation={() => { toggleLanguage(); isOpen = false; }}
+                    >
+                        English
+                    </button>
+                    <button 
+                        class="language-option {currentLang === 'bn' ? 'active' : ''}"
+                        on:click|stopPropagation={() => { toggleLanguage(); isOpen = false; }}
+                    >
+                        বাংলা
+                    </button>
+                </div>
+            {/if}
+        </div>
         <a href="/login" class="btn-secondary">Login</a>
         <a href="/signup" class="btn-primary">Get Started</a>
     </div>
@@ -100,6 +159,55 @@
 .actions {
     display: flex;
     gap: 1rem;
+    align-items: center;
+    position: relative;
+}
+
+.language-switcher {
+    position: relative;
+}
+
+.language-toggle {
+    min-width: 60px;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #1E293B;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    min-width: 120px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.language-option {
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: none;
+    color: #E2E8F0;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.language-option:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #8B5CF6;
+}
+
+.language-option.active {
+    color: #8B5CF6;
+    font-weight: 500;
 }
 
 .btn-primary {
